@@ -2,9 +2,17 @@ import type { SVGProps } from 'react'
 
 export const SearchIcon = ({
   color = '#f9f9f9',
+  size = 24,
   ...props
-}: SVGProps<SVGSVGElement>) => (
-  <svg width={24} height={24} {...props}>
+}: SVGProps<SVGSVGElement> & { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox='0 0 24 25'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <path
       fill={color}
       fillRule='evenodd'
