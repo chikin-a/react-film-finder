@@ -1,0 +1,22 @@
+@use 'sass:color';
+@use '../../styles/colors';
+@use '../../styles/radius';
+
+.button {
+  width: 100%;
+  padding: 19px 20px;
+  border: none;
+  border-radius: radius.$l;
+  background-color: colors.$primary;
+  color: colors.$black;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 100%;
+  transition: background-color 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background-color: color.scale(colors.$primary, $lightness: -8%);
+    cursor: pointer;
+  }
+}
